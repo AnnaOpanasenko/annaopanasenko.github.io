@@ -1,0 +1,52 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid rgb(0, 0, 0);  /* черная линия */
+    margin: auto;        /* центрируем */
+   }
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(./png/dino4.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(./png/cactus3.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMov 1.5s infinite linear;  /*название анимации, ее время, непрерывность, по линии */
+}
+@keyframes cactusMov {    /*ключевые кадры к елементу в момент времени(как будет изменятся в зависимости от времени) */
+0% {
+    left: 580px;
+}
+100% {
+    left: -20px;
+}
+}
+.jump {
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 130px;
+    }
+    50% {
+        top: 80px;
+    }
+    80% {
+        top: 130px;
+    }
+    100% {
+        top: 150px;
+    }
+}
